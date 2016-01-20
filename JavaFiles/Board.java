@@ -10,7 +10,7 @@ public class Board {
       for(int i = 0; i < length; i++) {
          char temp = word.charAt(i);
          if(temp != ' ') {
-            boardLetters[i] = '_';      
+            boardLetters[i] = '-';      
          }
          else {
             boardLetters[i] = ' ';
@@ -18,7 +18,10 @@ public class Board {
       }
    }
    
-   public void set(char c) {
+   
+   public void set(String s) {
+      s = s.trim();
+      char c = s.charAt(0);
       c = Character.toLowerCase(c);
       for(int i = 0; i < length; i++) {
          if(c == Character.toLowerCase(word.charAt(i))) {
@@ -27,7 +30,13 @@ public class Board {
       }
    }
    
-   public boolean contains(char c) { 
+   public boolean won() {
+      return word.equalsIgnoreCase(toString());
+   }
+   
+   public boolean contains(String s) { 
+      s = s.trim();
+      char c = s.charAt(0);
       c = Character.toLowerCase(c);
       for(int i = 0; i < length; i++) {
          if(c == Character.toLowerCase(word.charAt(i))) {
@@ -39,7 +48,7 @@ public class Board {
    
    public String toString() {
       String s = "";
-      for(int i = 0; i < 0; i++) {
+      for(int i = 0; i < length; i++) {
          s += boardLetters[i];
       }
       return s;
