@@ -2,7 +2,7 @@ import java.util.*;
 
 public class HangmanMain {
    public static void main(String[] args) {
-      System.out.println("Welcome to hangman!");
+      /*System.out.println("Welcome to hangman!");
       Board b = new Board("Zodiac");
       Scanner input = new Scanner(System.in);
       while(!b.won()) {
@@ -15,6 +15,8 @@ public class HangmanMain {
             System.out.println("NOPE");
          }
          System.out.println(b);
-      }
+      }*/
+      Frames frame = new Frames();
+      
    }
 }
